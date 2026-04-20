@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg-rgb: 3 5 7;
+  --text-rgb: 245 247 251;
+  --muted-rgb: 151 165 181;
+  --surface-rgb: 255 255 255;
+  --surface-2-rgb: 255 255 255;
+  --accent-rgb: 42 168 255;
+  --accent-strong-rgb: 12 110 255;
+  --bg: rgb(var(--bg-rgb));
+  --text: rgb(var(--text-rgb));
+  --muted: rgb(var(--muted-rgb));
+  --surface: rgb(var(--surface-rgb) / 0.04);
+  --surface-2: rgb(var(--surface-2-rgb) / 0.06);
+  --accent: rgb(var(--accent-rgb));
+  --accent-strong: rgb(var(--accent-strong-rgb));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(42, 168, 255, 0.16), transparent 24%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 18%),
+    linear-gradient(180deg, #06090d 0%, #030507 55%, #020406 100%);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.028) 18%, transparent 42%),
+    linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.016) 100%);
+  opacity: 0.8;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes shimmer-x {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(560%, 0, 0);
+  }
+}
+
+@keyframes image-filmstrip {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+::selection {
+  background: rgba(42, 168, 255, 0.26);
+  color: #ffffff;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent/70 ring-offset-2 ring-offset-[#05080c];
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-20 md:py-28;
+  }
+
+  .hero-panel {
+    @apply relative rounded-[2.25rem] border border-white/10 bg-white/[0.03] shadow-soft backdrop-blur-xl;
+  }
+
+  .panel {
+    @apply rounded-[1.75rem] border border-white/10 bg-white/[0.04] shadow-soft backdrop-blur-xl;
+  }
+
+  .panel-soft {
+    @apply rounded-[1.5rem] border border-white/10 bg-white/[0.03] shadow-soft;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-accent/25 bg-accent/10 px-4 py-1.5 font-display text-xs uppercase tracking-[0.28em] text-accent;
+  }
+
+  .chrome-line {
+    background: linear-gradient(90deg, transparent 0%, rgba(42, 168, 255, 0.95) 48%, transparent 100%);
+  }
+
+  .marquee-track {
+    animation: marquee 28s linear infinite;
+  }
+
+  .animate-shimmer-x {
+    animation: shimmer-x 5.4s linear infinite;
+  }
+
+  .image-filmstrip {
+    animation: image-filmstrip 42s linear infinite;
+    will-change: transform;
+  }
+
+  .image-filmstrip-reverse {
+    animation-direction: reverse;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full border border-accent/40 bg-gradient-to-r from-accent to-accent-strong px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-glow transition duration-300 hover:-translate-y-0.5 hover:brightness-110;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-100 transition duration-300 hover:-translate-y-0.5 hover:border-accent/30 hover:bg-white/[0.08];
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs uppercase tracking-[0.22em] text-slate-200;
+  }
+
+  .input-field {
+    @apply w-full rounded-[1.1rem] border border-white/10 bg-black/25 px-4 py-3 text-sm text-white placeholder:text-slate-500 transition focus:border-accent/50 focus:bg-white/[0.03];
+  }
+}
+
+
