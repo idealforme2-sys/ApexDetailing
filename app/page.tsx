@@ -464,12 +464,12 @@ export default function HomePage() {
                       Home driveways, garage-front appointments, and nearby local stops
                       where the vehicle can stay parked while the detail gets handled.
                     </p>
-                    <div className="mt-6 grid gap-3 md:grid-cols-2">
+                    <div className="mt-6 grid gap-3 lg:grid-cols-2">
                       <div className="rounded-[1.25rem] border border-white/10 bg-black/25 p-4">
                         <p className="text-[0.63rem] uppercase tracking-widest text-slate-500">
                           Built for
                         </p>
-                        <p className="mt-2 text-xs uppercase tracking-normal text-white sm:text-sm">
+                        <p className="mt-2 text-xs uppercase tracking-tight text-white sm:text-sm sm:tracking-normal">
                           Home appointments
                         </p>
                       </div>
@@ -477,7 +477,7 @@ export default function HomePage() {
                         <p className="text-[0.63rem] uppercase tracking-widest text-slate-500">
                           Works well at
                         </p>
-                        <p className="mt-2 text-xs uppercase tracking-normal text-white sm:text-sm">
+                        <p className="mt-2 text-xs uppercase tracking-tight text-white sm:text-sm sm:tracking-normal">
                           Driveways and local stops
                         </p>
                       </div>
