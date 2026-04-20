@@ -44,11 +44,11 @@ export function AutoImageGallery({
   }, [images.length, intervalMs, prefersReducedMotion]);
 
   return (
-    <article className="hero-panel overflow-hidden h-full flex flex-col min-w-0">
-      <div className="flex flex-col h-full bg-white/10 gap-px">
+    <article className="hero-panel overflow-hidden lg:h-full flex flex-col min-w-0">
+      <div className="flex flex-col lg:h-full bg-white/10 gap-px">
         <div
           className={cn(
-            "p-6 sm:p-7 flex-1",
+            "p-6 sm:p-7 lg:flex-1",
             accent === "after"
               ? "bg-[radial-gradient(circle_at_top_left,rgba(42,168,255,0.24),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))]"
               : "bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03)),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_28%)]",

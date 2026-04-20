@@ -409,8 +409,8 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2 items-stretch">
-            <Reveal className="h-full min-w-0">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-stretch">
+            <Reveal className="lg:h-full min-w-0">
               <AutoImageGallery
                 eyebrow="Before"
                 title="What the vehicle can look like before Apex gets to work."
@@ -420,7 +420,7 @@ export default function HomePage() {
               />
             </Reveal>
 
-            <Reveal delay={0.08} className="h-full min-w-0">
+            <Reveal delay={0.08} className="lg:h-full min-w-0">
               <AutoImageGallery
                 eyebrow="After"
                 title="What the finish looks like after the detail is complete."
