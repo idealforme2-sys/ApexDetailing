@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { AutoImageGallery } from "@/components/auto-image-gallery";
 import { FAQList } from "@/components/faq-list";
-import { HomeHero } from "@/components/home-hero";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
