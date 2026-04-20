@@ -48,7 +48,7 @@ export function AutoImageGallery({
       <div className="flex flex-col h-full bg-white/10 gap-px">
         <div
           className={cn(
-            "p-7 sm:p-8 flex-1",
+            "p-6 sm:p-7 flex-1",
             accent === "after"
               ? "bg-[radial-gradient(circle_at_top_left,rgba(42,168,255,0.24),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))]"
               : "bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03)),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_28%)]",
@@ -56,21 +56,19 @@ export function AutoImageGallery({
         >
           <p
             className={cn(
-              "text-xs uppercase tracking-[0.28em]",
+              "text-[0.65rem] uppercase tracking-[0.28em]",
               accent === "after" ? "text-accent" : "text-slate-300",
             )}
           >
             {eyebrow}
           </p>
-          <p className="mt-4 font-display text-4xl uppercase tracking-[0.08em] text-white sm:text-5xl">
+          <p className="mt-3 font-display text-3xl uppercase tracking-[0.08em] text-white sm:text-4xl">
             {title}
           </p>
-          <p className="mt-5 max-w-md text-sm leading-7 text-slate-300">{description}</p>
-
-
+          <p className="mt-4 max-w-md text-xs leading-6 text-slate-400">{description}</p>
         </div>
 
-        <div className="bg-[#05080c] p-5 sm:p-6 shrink-0">
+        <div className="bg-[#05080c] p-4 sm:p-5 shrink-0">
           <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/10 bg-black/40">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(42,168,255,0.14),transparent_42%),linear-gradient(180deg,transparent_40%,rgba(2,4,6,0.82)_100%)]" />
             <AnimatePresence mode="wait">

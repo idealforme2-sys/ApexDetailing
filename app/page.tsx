@@ -409,7 +409,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-2 items-stretch">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2 items-stretch">
             <Reveal className="h-full min-w-0">
               <AutoImageGallery
                 eyebrow="Before"
