@@ -23,7 +23,7 @@ export function Footer() {
                 <p className="font-display text-2xl uppercase tracking-[0.14em] text-white">
                   Apex
                 </p>
-                <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                <p className="text-xs uppercase tracking-widest text-slate-400">
                   Mobile Detailing
                 </p>
               </div>
@@ -78,7 +78,7 @@ export function Footer() {
             </div>
 
             <div className="mt-6 rounded-[1.6rem] border border-accent/25 bg-accent/10 p-5">
-              <p className="text-xs uppercase tracking-[0.28em] text-accent">Service Area</p>
+              <p className="text-xs uppercase tracking-widest text-accent">Service Area</p>
               <p className="mt-2 text-sm leading-7 text-slate-200">{business.serviceArea}</p>
               <p className="mt-2 text-sm leading-7 text-slate-300">{business.offer}</p>
             </div>
@@ -88,7 +88,7 @@ export function Footer() {
         <div className="mt-12 rounded-[2rem] border border-white/10 bg-white/[0.03] p-4 shadow-soft sm:p-5">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-accent">Google listing</p>
+              <p className="text-xs uppercase tracking-widest text-accent">Google listing</p>
               <p className="mt-2 font-display text-3xl uppercase tracking-[0.08em] text-white">
                 Find Apex
               </p>
@@ -141,10 +141,10 @@ export function Footer() {
               </svg>
             </Link>
 
-            <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-slate-400">
+            <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[0.68rem] uppercase tracking-wider text-slate-400">
               Franklin and surrounding areas
             </span>
-            <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[0.68rem] uppercase tracking-[0.22em] text-slate-400">
+            <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[0.68rem] uppercase tracking-wider text-slate-400">
               Premium mobile auto detailing
             </span>
           </div>
@@ -153,7 +153,7 @@ export function Footer() {
             href={business.creatorHref}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-[0.72rem] uppercase tracking-[0.22em] whitespace-nowrap"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-[0.72rem] uppercase tracking-wider whitespace-nowrap"
           >
             <span className="text-slate-500 transition-colors duration-150 group-hover:text-slate-400">
               Created by

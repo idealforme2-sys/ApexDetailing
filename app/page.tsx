@@ -54,7 +54,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(42,168,255,0.24),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_26%)] transition-opacity duration-500 group-hover:opacity-80" />
               <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-80" />
               <div className="relative z-10">
-                <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                <p className="text-xs uppercase tracking-widest text-accent">
                   From the feed
                 </p>
                 <p className="mx-auto mt-3 max-w-xs font-display text-3xl uppercase tracking-[0.08em] text-white">
@@ -79,7 +79,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="mt-7 flex flex-col items-center gap-3">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-4 py-2 text-[0.7rem] uppercase tracking-[0.24em] text-white">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-4 py-2 text-[0.7rem] uppercase tracking-widest text-white">
                     <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_16px_rgba(42,168,255,0.9)]" />
                     @apexmobiledetailing26
                   </div>
@@ -87,7 +87,7 @@ export default function HomePage() {
                     href={business.instagramHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="group/btn inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-5 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-slate-100 transition duration-300 hover:border-accent/35 hover:bg-accent/10 hover:text-white"
+                    className="group/btn inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-5 py-3 text-[0.72rem] uppercase tracking-wider text-slate-100 transition duration-300 hover:border-accent/35 hover:bg-accent/10 hover:text-white"
                   >
                     <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/30 text-accent transition-colors group-hover/btn:border-accent/30 group-hover/btn:bg-accent/20">
                       <svg
@@ -114,7 +114,7 @@ export default function HomePage() {
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
               <div className="panel-soft p-5 transition-colors hover:border-white/10">
-                <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                <p className="text-xs uppercase tracking-widest text-slate-400">
                   Full detail special
                 </p>
                 <p className="mt-3 font-display text-5xl uppercase tracking-[0.08em] text-white">
@@ -156,7 +156,7 @@ export default function HomePage() {
             {featuredServices.map((service, index) => (
               <Reveal key={service.name} delay={index * 0.08}>
                 <article className="panel h-full p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                  <p className="text-xs uppercase tracking-widest text-accent">
                     {service.name}
                   </p>
                   <p className="mt-4 text-base leading-7 text-slate-200">
@@ -241,7 +241,7 @@ export default function HomePage() {
                         key={item.label}
                         className="rounded-[1.45rem] border border-white/10 bg-black/25 p-5"
                       >
-                        <p className="text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
+                        <p className="text-[0.68rem] uppercase tracking-widest text-slate-500">
                           {item.label}
                         </p>
                         <p className="mt-3 text-sm leading-7 text-slate-200">{item.value}</p>
@@ -273,7 +273,7 @@ export default function HomePage() {
               <article className="hero-panel overflow-hidden p-0">
                 <div className="grid gap-px bg-white/10 lg:grid-cols-[0.8fr_1.2fr]">
                   <div className="bg-[radial-gradient(circle_at_top_left,rgba(42,168,255,0.2),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-8 sm:p-10">
-                    <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                    <p className="text-xs uppercase tracking-widest text-accent">
                       {pricing.featured.title}
                     </p>
                     <p className="mt-5 font-display text-7xl uppercase leading-none tracking-[0.08em] text-white">
@@ -283,7 +283,7 @@ export default function HomePage() {
                       A strong single visit when you want the cabin refreshed and the
                       exterior handled properly.
                     </p>
-                    <div className="mt-6 inline-flex rounded-full border border-accent/25 bg-accent/10 px-4 py-2 text-[0.68rem] uppercase tracking-[0.24em] text-white">
+                    <div className="mt-6 inline-flex rounded-full border border-accent/25 bg-accent/10 px-4 py-2 text-[0.68rem] uppercase tracking-widest text-white">
                       {business.offer}
                     </div>
                     <div className="mt-8 flex flex-wrap gap-3">
@@ -313,10 +313,10 @@ export default function HomePage() {
                           key={item}
                           className="rounded-[1.35rem] border border-white/10 bg-white/[0.03] px-4 py-4"
                         >
-                          <p className="text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
+                          <p className="text-[0.68rem] uppercase tracking-widest text-slate-500">
                             {String(index + 1).padStart(2, "0")}
                           </p>
-                          <p className="mt-3 text-sm uppercase tracking-[0.2em] text-white">
+                          <p className="mt-3 text-sm uppercase tracking-widest text-white">
                             {item}
                           </p>
                         </div>
@@ -335,7 +335,7 @@ export default function HomePage() {
                             </p>
                             {service.prices.map((price) => (
                               <div key={price.label} className="sm:text-right">
-                                <p className="text-[0.68rem] uppercase tracking-[0.22em] text-slate-500">
+                                <p className="text-[0.68rem] uppercase tracking-wider text-slate-500">
                                   {price.label}
                                 </p>
                                 <p className="mt-1 text-lg text-slate-100">{price.value}</p>
@@ -363,7 +363,7 @@ export default function HomePage() {
                     A clean first-booking incentive for drivers who want to try Apex
                     without committing to a bigger jump in price.
                   </p>
-                  <div className="mt-6 rounded-[1.3rem] border border-white/10 bg-black/25 px-4 py-4 text-[0.7rem] uppercase tracking-[0.24em] text-slate-300">
+                  <div className="mt-6 rounded-[1.3rem] border border-white/10 bg-black/25 px-4 py-4 text-[0.7rem] uppercase tracking-widest text-slate-300">
                     Mention it when you call or request a quote
                   </div>
                 </article>
@@ -451,12 +451,12 @@ export default function HomePage() {
 
                 <div className="mt-7 grid gap-4 lg:grid-cols-[1.12fr_0.88fr]">
                   <div className="rounded-[2rem] border border-accent/20 bg-[radial-gradient(circle_at_top_left,rgba(42,168,255,0.2),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-6">
-                    <p className="text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+                    <p className="text-[0.68rem] uppercase tracking-widest text-accent">
                       Primary coverage
                     </p>
                     <div className="mt-4 inline-flex items-center gap-3 rounded-full border border-white/10 bg-black/30 px-4 py-3 text-slate-100">
                       <MapPin className="h-4.5 w-4.5 text-accent" />
-                      <span className="text-xs uppercase tracking-[0.22em]">
+                      <span className="text-xs uppercase tracking-wider">
                         {business.serviceArea}
                       </span>
                     </div>
@@ -466,7 +466,7 @@ export default function HomePage() {
                     </p>
                     <div className="mt-6 grid gap-3 sm:grid-cols-2">
                       <div className="rounded-[1.25rem] border border-white/10 bg-black/25 p-4">
-                        <p className="text-[0.63rem] uppercase tracking-[0.24em] text-slate-500">
+                        <p className="text-[0.63rem] uppercase tracking-widest text-slate-500">
                           Built for
                         </p>
                         <p className="mt-2 text-xs uppercase tracking-wide text-white sm:text-sm sm:tracking-wider">
@@ -485,7 +485,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="rounded-[2rem] border border-white/10 bg-black/30 p-6">
-                    <p className="text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
+                    <p className="text-[0.68rem] uppercase tracking-widest text-slate-500">
                       Mobile appointment value
                     </p>
                     <p className="mt-4 font-display text-3xl uppercase tracking-[0.08em] text-white">
@@ -503,7 +503,7 @@ export default function HomePage() {
                       ].map((item) => (
                         <div
                           key={item}
-                          className="rounded-[1.25rem] border border-white/10 bg-white/[0.04] px-4 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-slate-200"
+                          className="rounded-[1.25rem] border border-white/10 bg-white/[0.04] px-4 py-3 text-[0.72rem] uppercase tracking-wider text-slate-200"
                         >
                           {item}
                         </div>
@@ -526,7 +526,7 @@ export default function HomePage() {
               <div className="grid gap-4 xl:pt-1">
                 <div className="flex items-center justify-between rounded-[1.65rem] border border-white/10 bg-black/25 px-5 py-4">
                   <div>
-                    <p className="text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+                    <p className="text-[0.68rem] uppercase tracking-widest text-accent">
                       Appointment route
                     </p>
                     <p className="mt-2 text-sm leading-6 text-slate-300">
@@ -563,7 +563,7 @@ export default function HomePage() {
                             {String(index + 1).padStart(2, "0")}
                           </div>
                           <div>
-                            <p className="text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+                            <p className="text-[0.68rem] uppercase tracking-widest text-accent">
                               {processTags[index]}
                             </p>
                             <p className="mt-2 font-display text-[1.7rem] uppercase tracking-[0.08em] text-white sm:text-[1.95rem]">
@@ -581,7 +581,7 @@ export default function HomePage() {
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="rounded-[1.6rem] border border-white/10 bg-black/25 p-5">
-                    <p className="text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+                    <p className="text-[0.68rem] uppercase tracking-widest text-accent">
                       Best fit for
                     </p>
                     <p className="mt-3 text-sm leading-7 text-slate-300">
@@ -590,7 +590,7 @@ export default function HomePage() {
                     </p>
                   </div>
                   <div className="rounded-[1.6rem] border border-white/10 bg-black/25 p-5">
-                    <p className="text-[0.68rem] uppercase tracking-[0.24em] text-accent">
+                    <p className="text-[0.68rem] uppercase tracking-widest text-accent">
                       Quickest way in
                     </p>
                     <p className="mt-3 text-sm leading-7 text-slate-300">
@@ -640,7 +640,7 @@ export default function HomePage() {
                 <Link href="/contact" className="btn-secondary justify-center">
                   Get a Quote
                 </Link>
-                <div className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-xs uppercase tracking-[0.22em] text-slate-300">
+                <div className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-xs uppercase tracking-wider text-slate-300">
                   <Clock3 className="h-4 w-4 text-accent" />
                   {business.offer}
                 </div>

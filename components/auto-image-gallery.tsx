@@ -56,7 +56,7 @@ export function AutoImageGallery({
         >
           <p
             className={cn(
-              "text-[0.65rem] uppercase tracking-[0.28em]",
+              "text-[0.65rem] uppercase tracking-widest",
               accent === "after" ? "text-accent" : "text-slate-300",
             )}
           >
@@ -94,7 +94,7 @@ export function AutoImageGallery({
             </AnimatePresence>
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_60%,rgba(2,4,6,0.95)_100%)]" />
             <div className="absolute inset-x-0 bottom-0 z-10 flex items-center justify-between gap-4 border-t border-white/10 bg-black/40 px-5 py-4 backdrop-blur-md">
-              <span className="text-[0.68rem] uppercase tracking-[0.24em] text-slate-100">
+              <span className="text-[0.68rem] uppercase tracking-widest text-slate-100">
                 {accent === "after" ? "Finish result" : "Starting condition"}
               </span>
             </div>
@@ -122,7 +122,7 @@ export function AutoImageGallery({
                   className="object-cover transition duration-500 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,rgba(2,4,6,0.9)_100%)]" />
-                <span className="absolute bottom-2 left-2 text-[0.6rem] uppercase tracking-[0.24em] text-white">
+                <span className="absolute bottom-2 left-2 text-[0.6rem] uppercase tracking-widest text-white">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </button>

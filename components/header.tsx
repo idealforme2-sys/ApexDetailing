@@ -37,7 +37,7 @@ export function Header() {
               {[...announcementItems, ...announcementItems].map((item, index) => (
                 <span
                   key={`${item}-${index}`}
-                  className="inline-flex items-center gap-3 pr-8 text-[0.68rem] uppercase tracking-[0.28em] text-slate-200 sm:text-[0.72rem]"
+                  className="inline-flex items-center gap-3 pr-8 text-[0.68rem] uppercase tracking-widest text-slate-200 sm:text-[0.72rem]"
                 >
                   {index % 3 === 0 ? (
                     <Sparkles className="h-3.5 w-3.5 text-accent" />
@@ -77,7 +77,7 @@ export function Header() {
                 <p className="truncate font-display text-xl uppercase tracking-[0.16em] text-white">
                   Apex
                 </p>
-                <p className="truncate text-xs uppercase tracking-[0.28em] text-slate-400">
+                <p className="truncate text-xs uppercase tracking-widest text-slate-400">
                   Mobile Detailing
                 </p>
               </div>

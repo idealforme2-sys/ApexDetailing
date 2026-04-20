@@ -55,10 +55,10 @@ export function TrustCarousel() {
                     aria-label={`Show trust story ${index + 1}`}
                   >
                     <div className="flex items-center justify-between gap-3">
-                      <span className="text-[0.6rem] uppercase tracking-[0.28em] text-accent">
+                      <span className="text-[0.6rem] uppercase tracking-widest text-accent">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className="text-[0.62rem] uppercase tracking-[0.24em] text-slate-500">
+                      <span className="text-[0.62rem] uppercase tracking-widest text-slate-500">
                         {slide.source}
                       </span>
                     </div>
@@ -85,7 +85,7 @@ export function TrustCarousel() {
               <div className="relative flex h-full flex-col rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-5 shadow-soft sm:p-6">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-[0.62rem] uppercase tracking-[0.28em] text-accent">
+                    <p className="text-[0.62rem] uppercase tracking-widest text-accent">
                       Review spotlight
                     </p>
                     <p className="mt-1.5 flex items-center gap-1 text-accent">
@@ -110,7 +110,7 @@ export function TrustCarousel() {
                       }}
                       className="absolute inset-0 flex h-full flex-col"
                     >
-                      <p className="text-[0.62rem] uppercase tracking-[0.28em] text-slate-500">
+                      <p className="text-[0.62rem] uppercase tracking-widest text-slate-500">
                         {activeSlide.source}
                       </p>
 
@@ -120,7 +120,7 @@ export function TrustCarousel() {
                         </p>
                       </div>
 
-                      <p className="mt-3.5 max-w-2xl text-[0.62rem] uppercase tracking-[0.24em] text-slate-500">
+                      <p className="mt-3.5 max-w-2xl text-[0.62rem] uppercase tracking-widest text-slate-500">
                         {activeSlide.title}
                       </p>
 
@@ -128,7 +128,7 @@ export function TrustCarousel() {
                         {activeSlide.chips.map((chip) => (
                           <div
                             key={chip}
-                            className="rounded-[0.8rem] border border-white/10 bg-black/20 px-3 py-2 text-[0.58rem] uppercase tracking-[0.24em] text-slate-300"
+                            className="rounded-[0.8rem] border border-white/10 bg-black/20 px-3 py-2 text-[0.58rem] uppercase tracking-widest text-slate-300"
                           >
                             {chip}
                           </div>
