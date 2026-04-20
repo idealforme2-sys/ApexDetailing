@@ -22,7 +22,7 @@ export default function ServicesPage() {
           <div className="panel p-6">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                <p className="text-xs uppercase tracking-widest text-accent">
                   Service lineup
                 </p>
                 <p className="mt-3 font-display text-5xl uppercase tracking-[0.08em] text-white">
@@ -59,7 +59,7 @@ export default function ServicesPage() {
                 <article id={service.slug} className="panel scroll-mt-32 p-6 sm:p-8">
                   <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
                     <div className="max-w-3xl">
-                      <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                      <p className="text-xs uppercase tracking-widest text-accent">
                         Service 0{index + 1}
                       </p>
                       <h2 className="mt-4 font-display text-4xl uppercase tracking-[0.08em] text-white">
@@ -74,7 +74,7 @@ export default function ServicesPage() {
 
                   <div className="mt-8 grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
                     <div className="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5">
-                      <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                      <p className="text-xs uppercase tracking-widest text-slate-400">
                         Benefits
                       </p>
                       <ul className="mt-5 grid gap-3">
@@ -91,7 +91,7 @@ export default function ServicesPage() {
                     </div>
 
                     <div className="rounded-[1.6rem] border border-white/10 bg-black/20 p-5">
-                      <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                      <p className="text-xs uppercase tracking-widest text-slate-400">
                         Suggested add-ons
                       </p>
                       <div className="mt-5 flex flex-wrap gap-2">

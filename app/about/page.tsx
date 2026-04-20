@@ -22,7 +22,7 @@ export default function AboutPage() {
         aside={
           <div className="panel overflow-hidden">
             <div className="p-5">
-              <p className="text-xs uppercase tracking-[0.28em] text-accent">Brand presence</p>
+              <p className="text-xs uppercase tracking-widest text-accent">Brand presence</p>
               <div className="mt-5 overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/25 p-3">
                 <Image
                   src="/APEX_Detailing.jpg"

@@ -126,7 +126,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="panel-soft p-5 transition-colors hover:border-white/10">
-                <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                <p className="text-xs uppercase tracking-widest text-slate-400">
                   Featured upgrades
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -212,7 +212,7 @@ export default function HomePage() {
             <div className="grid gap-6">
               <Reveal delay={0.06}>
                 <article className="panel overflow-hidden p-6 sm:p-7">
-                  <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                  <p className="text-xs uppercase tracking-widest text-accent">
                     The kind of mobile service people come back for
                   </p>
                   <p className="mt-4 font-display text-3xl uppercase tracking-[0.08em] text-white">
@@ -299,7 +299,7 @@ export default function HomePage() {
 
                   <div className="bg-[#060a0e] p-8 sm:p-10">
                     <div className="flex items-center justify-between gap-4">
-                      <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                      <p className="text-xs uppercase tracking-widest text-slate-400">
                         What that visit covers
                       </p>
                       <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[0.68rem] uppercase tracking-[0.22em] text-slate-300">
@@ -353,7 +353,7 @@ export default function HomePage() {
             <div className="grid gap-6">
               <Reveal delay={0.08}>
                 <article className="panel overflow-hidden p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                  <p className="text-xs uppercase tracking-widest text-accent">
                     First visit advantage
                   </p>
                   <p className="mt-4 font-display text-5xl uppercase tracking-[0.08em] text-white">
@@ -371,7 +371,7 @@ export default function HomePage() {
               <Reveal delay={0.14}>
                 <article className="panel overflow-hidden p-0">
                   <div className="border-b border-white/10 px-6 py-5">
-                    <p className="text-xs uppercase tracking-[0.28em] text-slate-400">
+                    <p className="text-xs uppercase tracking-widest text-slate-400">
                       Popular add-ons
                     </p>
                   </div>
@@ -464,20 +464,20 @@ export default function HomePage() {
                       Home driveways, garage-front appointments, and nearby local stops
                       where the vehicle can stay parked while the detail gets handled.
                     </p>
-                    <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                    <div className="mt-6 grid gap-3 md:grid-cols-2">
                       <div className="rounded-[1.25rem] border border-white/10 bg-black/25 p-4">
                         <p className="text-[0.63rem] uppercase tracking-widest text-slate-500">
                           Built for
                         </p>
-                        <p className="mt-2 text-xs uppercase tracking-wide text-white sm:text-sm sm:tracking-wider">
+                        <p className="mt-2 text-xs uppercase tracking-normal text-white sm:text-sm">
                           Home appointments
                         </p>
                       </div>
                       <div className="rounded-[1.25rem] border border-white/10 bg-black/25 p-4">
-                        <p className="text-[0.63rem] uppercase tracking-[0.24em] text-slate-500">
+                        <p className="text-[0.63rem] uppercase tracking-widest text-slate-500">
                           Works well at
                         </p>
-                        <p className="mt-2 text-xs uppercase tracking-wide text-white sm:text-sm sm:tracking-wider">
+                        <p className="mt-2 text-xs uppercase tracking-normal text-white sm:text-sm">
                           Driveways and local stops
                         </p>
                       </div>

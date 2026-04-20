@@ -24,7 +24,7 @@ export default function PricingPage() {
             <div className="relative p-6">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(42,168,255,0.18),transparent_38%)]" />
               <div className="relative">
-                <p className="text-xs uppercase tracking-[0.28em] text-accent">Featured offer</p>
+                <p className="text-xs uppercase tracking-widest text-accent">Featured offer</p>
                 <p className="mt-3 font-display text-3xl uppercase tracking-[0.08em] text-white">
                   {pricing.featured.title}
                 </p>
@@ -82,7 +82,7 @@ export default function PricingPage() {
             <div className="grid gap-6">
               <Reveal delay={0.08}>
                 <div className="panel p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                  <p className="text-xs uppercase tracking-widest text-accent">
                     First-time customer
                   </p>
                   <p className="mt-4 font-display text-5xl uppercase tracking-[0.08em] text-white">
@@ -131,7 +131,7 @@ export default function PricingPage() {
             {pricing.services.map((service, index) => (
               <Reveal key={service.name} delay={index * 0.08}>
                 <article className="panel h-full p-6 sm:p-8">
-                  <p className="text-xs uppercase tracking-[0.28em] text-accent">
+                  <p className="text-xs uppercase tracking-widest text-accent">
                     {service.name}
                   </p>
                   <div className="mt-6 grid gap-4">
@@ -140,7 +140,7 @@ export default function PricingPage() {
                         key={tier.label}
                         className="flex items-center justify-between rounded-[1.3rem] border border-white/10 bg-black/25 px-5 py-4"
                       >
-                        <span className="text-sm uppercase tracking-[0.18em] text-slate-300">
+                        <span className="text-sm uppercase tracking-wider text-slate-300">
                           {tier.label}
                         </span>
                         <span className="font-display text-4xl uppercase tracking-[0.08em] text-white">
@@ -167,7 +167,7 @@ export default function PricingPage() {
             {pricing.addons.map((item, index) => (
               <Reveal key={item.name} delay={index * 0.06}>
                 <article className="panel h-full p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Add-on</p>
+                  <p className="text-xs uppercase tracking-widest text-slate-400">Add-on</p>
                   <p className="mt-4 font-display text-3xl uppercase tracking-[0.08em] text-white">
                     {item.name}
                   </p>
