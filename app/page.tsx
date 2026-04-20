@@ -469,7 +469,7 @@ export default function HomePage() {
                         <p className="text-[0.63rem] uppercase tracking-[0.24em] text-slate-500">
                           Built for
                         </p>
-                        <p className="mt-2 text-xs uppercase tracking-[0.1em] text-white sm:text-sm sm:tracking-[0.18em]">
+                        <p className="mt-2 text-xs uppercase tracking-wide text-white sm:text-sm sm:tracking-wider">
                           Home appointments
                         </p>
                       </div>
@@ -477,7 +477,7 @@ export default function HomePage() {
                         <p className="text-[0.63rem] uppercase tracking-[0.24em] text-slate-500">
                           Works well at
                         </p>
-                        <p className="mt-2 text-xs uppercase tracking-[0.1em] text-white sm:text-sm sm:tracking-[0.18em]">
+                        <p className="mt-2 text-xs uppercase tracking-wide text-white sm:text-sm sm:tracking-wider">
                           Driveways and local stops
                         </p>
                       </div>
