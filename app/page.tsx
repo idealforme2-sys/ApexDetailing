@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  ArrowUpRight,
   CheckCircle2,
   Clock3,
   MapPin,
@@ -11,7 +9,7 @@ import {
 } from "lucide-react";
 import { AutoImageGallery } from "@/components/auto-image-gallery";
 import { FAQList } from "@/components/faq-list";
-import { PageHero } from "@/components/page-hero";
+import { HomeHero } from "@/components/home-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { TrustCarousel } from "@/components/trust-carousel";
@@ -29,119 +27,13 @@ import {
 export const metadata: Metadata = metadataByPage.home;
 
 export default function HomePage() {
-  const [finishStandard, convenienceStandard] = whyChooseApex;
+  const [finishStandard, convenienceStandard, trustStandard, problemAreas] =
+    whyChooseApex;
   const processTags = ["Select", "Confirm", "Hand-back"];
 
   return (
     <>
-      <PageHero
-        eyebrow="Franklin mobile detailing"
-        title={
-          <>
-            Premium mobile detailing with a finish that feels{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/50">
-              showroom fresh.
-            </span>
-          </>
-        }
-        description="Apex brings refined interior and exterior detailing to your driveway, so your vehicle looks sharper without taking time out of your day."
-        primaryCta={{ href: business.phoneHref, label: "Call Now" }}
-        secondaryCta={{ href: "/contact", label: "Get a Quote" }}
-        highlights={[business.serviceArea, ...business.highlights]}
-        aside={
-          <div className="grid gap-4">
-            <div className="panel group relative overflow-hidden p-6 text-center transition-colors hover:border-white/15 sm:p-7">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(42,168,255,0.24),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_26%)] transition-opacity duration-500 group-hover:opacity-80" />
-              <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-80" />
-              <div className="relative z-10">
-                <p className="text-xs uppercase tracking-widest text-accent">
-                  From the feed
-                </p>
-                <p className="mx-auto mt-3 max-w-xs font-display text-3xl uppercase tracking-[0.08em] text-white">
-                  Franklin driveways. Finished right.
-                </p>
-                <p className="mx-auto mt-4 max-w-sm text-sm leading-7 text-slate-300">
-                  Recent gloss shots, interior cleanups, and hand-backs from the kind of
-                  work people are actually booking Apex for.
-                </p>
-
-                <div className="relative mx-auto mt-7 flex aspect-square w-full max-w-[16rem] items-center justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(42,168,255,0.24),transparent_44%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-4 shadow-glow transition-colors duration-500 group-hover:border-white/20">
-                  <div className="absolute inset-5 rounded-[1.7rem] border border-white/10 bg-black/25" />
-                  <div className="absolute inset-x-10 top-7 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-60" />
-                  <Image
-                    src="/APEX_Detailing.jpg"
-                    alt="APEX Mobile Detailing logo"
-                    width={768}
-                    height={768}
-                    priority
-                    className="relative z-10 aspect-square w-full max-w-[11.5rem] rounded-[1.3rem] object-cover shadow-[0_24px_70px_rgba(0,0,0,0.45)] transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
-                </div>
-
-                <div className="mt-7 flex flex-col items-center gap-3">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-4 py-2 text-[0.7rem] uppercase tracking-widest text-white">
-                    <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_16px_rgba(42,168,255,0.9)]" />
-                    @apexmobiledetailing26
-                  </div>
-                  <Link
-                    href={business.instagramHref}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group/btn inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-5 py-3 text-[0.72rem] uppercase tracking-wider text-slate-100 transition duration-300 hover:border-accent/35 hover:bg-accent/10 hover:text-white"
-                  >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/30 text-accent transition-colors group-hover/btn:border-accent/30 group-hover/btn:bg-accent/20">
-                      <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                        className="h-4.5 w-4.5"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <rect x="3" y="3" width="18" height="18" rx="5" />
-                        <circle cx="12" cy="12" r="4.25" />
-                        <circle cx="17.4" cy="6.6" r="0.8" fill="currentColor" stroke="none" />
-                      </svg>
-                    </span>
-                    Check us out
-                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-              <div className="panel-soft p-5 transition-colors hover:border-white/10">
-                <p className="text-xs uppercase tracking-widest text-slate-400">
-                  Full detail special
-                </p>
-                <p className="mt-3 font-display text-5xl uppercase tracking-[0.08em] text-white">
-                  {pricing.featured.startingAt}
-                </p>
-                <p className="mt-2 text-sm leading-7 text-slate-300">
-                  Interior deep clean, exterior hand wash, tire shine, and streak-free
-                  windows.
-                </p>
-              </div>
-              <div className="panel-soft p-5 transition-colors hover:border-white/10">
-                <p className="text-xs uppercase tracking-widest text-slate-400">
-                  Featured upgrades
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {business.highlights.map((item) => (
-                    <span key={item} className="pill">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-                <p className="mt-4 text-sm leading-7 text-slate-300">{business.offer}</p>
-              </div>
-            </div>
-          </div>
-        }
-      />
+      <HomeHero />
 
       <TrustCarousel />
 
@@ -200,11 +92,22 @@ export default function HomePage() {
                       vehicle feel carefully finished when the appointment is over.
                     </p>
                     <div className="mt-8 flex flex-wrap gap-3">
-                      <span className="pill">Home appointments</span>
-                      <span className="pill">Interior and exterior</span>
-                      <span className="pill">$20 off for first-time customers</span>
+                      <span className="pill">{finishStandard.label}</span>
+                      <span className="pill">{business.serviceArea}</span>
+                      <span className="pill">Luxury vehicle friendly</span>
                     </div>
 
+                    <article className="mt-8 rounded-[2rem] border border-white/10 bg-black/30 p-6">
+                      <p className="text-[0.68rem] uppercase tracking-widest text-accent">
+                        {finishStandard.label}
+                      </p>
+                      <p className="mt-4 font-display text-4xl uppercase tracking-[0.08em] text-white">
+                        {finishStandard.title}
+                      </p>
+                      <p className="mt-5 max-w-lg text-base leading-8 text-slate-300">
+                        {finishStandard.description}
+                      </p>
+                    </article>
                   </div>
                 </div>
               </article>
@@ -213,28 +116,23 @@ export default function HomePage() {
               <Reveal delay={0.06}>
                 <article className="panel overflow-hidden p-6 sm:p-7">
                   <p className="text-xs uppercase tracking-widest text-accent">
-                    The kind of mobile service people come back for
+                    {convenienceStandard.label}
                   </p>
                   <p className="mt-4 font-display text-3xl uppercase tracking-[0.08em] text-white">
-                    Premium when it arrives. Premium when it leaves.
+                    {convenienceStandard.title}
                   </p>
                   <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
-                    Apex is built for drivers who want the convenience of mobile service
-                    without the finish feeling casual, rushed, or half-done.
+                    {convenienceStandard.description}
                   </p>
-                  <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  <div className="mt-6 grid gap-4 md:grid-cols-2">
                     {[
                       {
-                        label: "At-home convenience",
-                        value: "Book it where the vehicle already is.",
+                        label: trustStandard.label,
+                        value: trustStandard.description,
                       },
                       {
-                        label: "Sharper hand-back",
-                        value: "The result should feel complete, not just cleaned up.",
-                      },
-                      {
-                        label: "Real add-on value",
-                        value: "Pet hair, stains, extraction, and wax handled intentionally.",
+                        label: problemAreas.label,
+                        value: problemAreas.description,
                       },
                     ].map((item) => (
                       <div
@@ -249,6 +147,27 @@ export default function HomePage() {
                     ))}
                   </div>
                 </article>
+              </Reveal>
+              <Reveal delay={0.12}>
+                <div className="grid gap-4 md:grid-cols-3">
+                  {[
+                    "Home appointments",
+                    "Interior and exterior",
+                    "Tesla and Range Rover friendly",
+                    "$20 off for first-time customers",
+                  ].map((item, index) => (
+                    <div
+                      key={item}
+                      className={
+                        index === 3
+                          ? "rounded-[1.55rem] border border-accent/35 bg-accent/10 px-5 py-4 text-[0.72rem] uppercase tracking-[0.24em] text-white"
+                          : "rounded-[1.55rem] border border-white/10 bg-white/[0.04] px-5 py-4 text-[0.72rem] uppercase tracking-[0.24em] text-slate-200"
+                      }
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </Reveal>
             </div>
           </div>

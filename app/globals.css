@@ -73,6 +73,131 @@ body::before {
   }
 }
 
+@keyframes image-zoom {
+  0% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.14) translate3d(0, -2.2%, 0);
+  }
+  100% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes preloader-shell {
+  0%,
+  78% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes preloader-card {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.95);
+  }
+  18%,
+  78% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0) scale(0.985);
+  }
+}
+
+@keyframes preloader-sweep {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(520%, 0, 0);
+  }
+}
+
+@keyframes preloader-line {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes preloader-orbit {
+  0%,
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(0.96);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate3d(-50%, -50%, 0) scale(1.04);
+    opacity: 0.7;
+  }
+}
+
+@keyframes preloader-phrase-rail {
+  0%,
+  20% {
+    transform: translate3d(0, 0%, 0);
+  }
+  34%,
+  56% {
+    transform: translate3d(0, -33.333%, 0);
+  }
+  70%,
+  100% {
+    transform: translate3d(0, -66.666%, 0);
+  }
+}
+
+@keyframes preloader-chip {
+  0%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(0, 0, 0, 0.22);
+  }
+  50% {
+    border-color: rgba(42, 168, 255, 0.28);
+    background-color: rgba(42, 168, 255, 0.08);
+  }
+}
+
+@keyframes preloader-progress {
+  0% {
+    width: 10%;
+  }
+  45% {
+    width: 42%;
+  }
+  72% {
+    width: 74%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes preloader-dot {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
 ::selection {
   background: rgba(42, 168, 255, 0.26);
   color: #ffffff;
@@ -139,6 +264,53 @@ summary::-webkit-details-marker {
     will-change: transform;
   }
 
+  .animate-image-zoom {
+    animation: image-zoom 14s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .preloader-shell {
+    animation: preloader-shell 2.8s ease forwards;
+    pointer-events: none;
+  }
+
+  .preloader-card {
+    animation: preloader-card 2.8s ease forwards;
+  }
+
+  .preloader-sweep,
+  .preloader-logo-sweep {
+    animation: preloader-sweep 2s ease-in-out infinite;
+  }
+
+  .preloader-line {
+    animation: preloader-line 2.1s ease-in-out infinite;
+  }
+
+  .preloader-orbit {
+    animation: preloader-orbit 2.2s ease-in-out infinite;
+  }
+
+  .preloader-phrase-window {
+    mask-image: linear-gradient(180deg, transparent 0%, black 18%, black 82%, transparent 100%);
+  }
+
+  .preloader-phrase-rail {
+    animation: preloader-phrase-rail 2.35s ease-in-out forwards;
+  }
+
+  .preloader-chip {
+    animation: preloader-chip 1.8s ease-in-out infinite;
+  }
+
+  .preloader-progress {
+    animation: preloader-progress 2.6s ease-in-out forwards;
+  }
+
+  .preloader-dot {
+    animation: preloader-dot 1.15s ease-in-out infinite;
+  }
+
   .image-filmstrip-reverse {
     animation-direction: reverse;
   }
@@ -160,4 +332,16 @@ summary::-webkit-details-marker {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .image-filmstrip {
+    animation: none !important;
+  }
 
+  .animate-image-zoom {
+    animation: none !important;
+  }
+
+  .preloader-shell {
+    animation-duration: 1.8s;
+  }
+}
