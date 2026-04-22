@@ -6,7 +6,7 @@ import { business, pricing } from "@/lib/site-data";
 
 export function HomeHero() {
   return (
-    <section className="relative -mt-28 flex min-h-[95vh] items-start overflow-hidden pb-16 pt-[8.15rem] md:-mt-32 md:pt-[8.7rem]">
+    <section className="relative -mt-28 flex min-h-[calc(100vh-2.25rem)] items-start overflow-hidden pb-8 pt-[6.85rem] md:-mt-32 md:min-h-[calc(100vh-2.5rem)] md:pt-[7.35rem] lg:pb-9">
       <div className="absolute inset-0 z-0">
         <Image
           src="/premium_hero_bg_backup.png"
@@ -23,47 +23,47 @@ export function HomeHero() {
       </div>
 
       <div className="site-container relative z-10 w-full">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16 xl:grid-cols-[1.3fr_0.7fr]">
-          <Reveal className="flex flex-col justify-start py-4 lg:py-8">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-xs uppercase tracking-[0.24em] text-accent backdrop-blur-md">
+        <div className="grid items-start gap-6 lg:grid-cols-[1.32fr_0.68fr] lg:gap-8 xl:grid-cols-[1.38fr_0.62fr]">
+          <Reveal className="flex flex-col justify-start py-1 lg:py-2">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3.5 py-1.5 text-[0.68rem] uppercase tracking-[0.22em] text-accent backdrop-blur-md">
               <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(42,168,255,0.8)]" />
               Franklin mobile detailing
             </div>
 
-            <h1 className="mt-8 max-w-4xl font-display text-5xl uppercase leading-[0.95] tracking-[0.06em] text-white sm:text-7xl lg:text-[4.5rem] xl:text-8xl">
+            <h1 className="mt-4 max-w-none font-display text-[clamp(2.6rem,4.95vw,5.35rem)] uppercase leading-[0.91] tracking-[0.035em] text-white">
               Premium mobile detailing with a finish that feels{" "}
               <span className="bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
                 showroom fresh.
               </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+            <p className="mt-4 max-w-xl text-[0.95rem] leading-[1.65] text-slate-300 sm:text-[0.99rem]">
               Apex brings refined interior and exterior detailing to your driveway, so
               your vehicle looks sharper without taking time out of your day.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-5 flex flex-wrap gap-3">
               <Link
                 href={business.phoneHref}
-                className="btn-primary group px-8 py-4 text-sm shadow-[0_0_30px_-5px_rgba(42,168,255,0.4)]"
+                className="btn-primary group px-6 py-3 text-sm shadow-[0_0_30px_-5px_rgba(42,168,255,0.4)]"
               >
                 Call Now
                 <Phone className="h-4 w-4 transition-transform group-hover:scale-110" />
               </Link>
               <Link
                 href="/contact"
-                className="btn-secondary group border-white/10 bg-white/5 px-8 py-4 text-sm backdrop-blur-md hover:bg-white/10"
+                className="btn-secondary group border-white/10 bg-white/5 px-6 py-3 text-sm backdrop-blur-md hover:bg-white/10"
               >
                 Get a Quote
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-3">
+            <div className="mt-5 flex flex-wrap gap-2">
               {[business.serviceArea, ...business.highlights].map((item) => (
                 <span
                   key={item}
-                  className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[0.7rem] uppercase tracking-[0.2em] text-slate-200 backdrop-blur-md transition-colors hover:bg-white/10"
+                  className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-[0.64rem] uppercase tracking-[0.18em] text-slate-200 backdrop-blur-md transition-colors hover:bg-white/10"
                 >
                   {item}
                 </span>
@@ -71,29 +71,29 @@ export function HomeHero() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.15} className="flex flex-col justify-start pt-4 lg:pt-12">
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-              <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/40 p-6 shadow-2xl backdrop-blur-xl transition-colors hover:border-white/20 sm:p-8">
+          <Reveal delay={0.15} className="flex flex-col justify-start pt-1 lg:pt-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="group relative overflow-hidden rounded-[1.85rem] border border-white/10 bg-black/40 p-4 shadow-2xl backdrop-blur-xl transition-colors hover:border-white/20 sm:p-5">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(42,168,255,0.15),transparent_60%)] opacity-60 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="relative z-10">
                   <p className="text-[0.65rem] uppercase tracking-[0.28em] text-accent">
                     From the feed
                   </p>
-                  <p className="mt-3 font-display text-2xl uppercase tracking-[0.08em] text-white">
+                  <p className="mt-2.5 font-display text-[1.55rem] uppercase leading-[1.02] tracking-[0.08em] text-white sm:text-[1.75rem]">
                     Franklin driveways. Finished right.
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">
+                  <p className="mt-2.5 text-sm leading-6 text-slate-300">
                     Recent gloss shots, interior cleanups, and hand-backs from the kind of
                     work people are actually booking Apex for.
                   </p>
 
-                  <div className="mt-8 flex items-center gap-4">
-                    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-[1.1rem] border border-white/10 shadow-glow">
+                  <div className="mt-5 flex items-center gap-3">
+                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-[1rem] border border-white/10 shadow-glow">
                       <Image
                         src="/APEX_Detailing.jpg"
                         alt="APEX Mobile Detailing logo"
                         fill
-                        sizes="64px"
+                        sizes="56px"
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
@@ -113,14 +113,14 @@ export function HomeHero() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/40 p-6 shadow-2xl backdrop-blur-xl sm:p-8">
+              <div className="relative overflow-hidden rounded-[1.85rem] border border-white/10 bg-black/40 p-4 shadow-2xl backdrop-blur-xl sm:p-5">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.05),transparent_60%)]" />
-                <div className="relative z-10 flex h-full flex-col justify-between gap-6">
+                <div className="relative z-10 flex h-full flex-col justify-between gap-4">
                   <div>
                     <p className="text-[0.65rem] uppercase tracking-[0.28em] text-slate-400">
                       Full detail special
                     </p>
-                    <p className="mt-3 font-display text-4xl uppercase tracking-[0.08em] text-white">
+                    <p className="mt-2.5 font-display text-[2.45rem] uppercase tracking-[0.08em] text-white sm:text-[2.7rem]">
                       {pricing.featured.startingAt}
                     </p>
                     <p className="mt-2 text-sm leading-6 text-slate-300">
@@ -129,7 +129,7 @@ export function HomeHero() {
                     </p>
                   </div>
 
-                  <div className="border-t border-white/10 pt-5">
+                  <div className="border-t border-white/10 pt-3.5">
                     <p className="text-[0.65rem] uppercase tracking-[0.28em] text-accent">
                       {business.offer}
                     </p>
