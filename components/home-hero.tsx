@@ -6,7 +6,7 @@ import { business, pricing } from "@/lib/site-data";
 
 export function HomeHero() {
   return (
-    <section className="relative -mt-28 flex min-h-[calc(100vh-2.25rem)] items-start overflow-hidden pb-8 pt-[6.85rem] md:-mt-32 md:min-h-[calc(100vh-2.5rem)] md:pt-[7.35rem] lg:pb-9">
+    <section className="relative -mt-28 flex min-h-[100svh] items-start overflow-hidden pb-6 pt-[7.35rem] md:-mt-32 md:pt-[7.95rem] lg:pb-7">
       <div className="absolute inset-0 z-0">
         <Image
           src="/premium_hero_bg_backup.png"
